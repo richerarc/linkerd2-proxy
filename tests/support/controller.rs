@@ -339,6 +339,7 @@ where
     pb::DestinationProfile {
         routes,
         retry_budget,
+        ..Default::default()
     }
 }
 
@@ -410,6 +411,11 @@ impl RouteBuilder {
 
     pub fn retryable(mut self, is: bool) -> Self {
         self.route.is_retryable = is;
+        self
+    }
+
+    pub fn timeout(mut self, dur: Duration) -> Self {
+        self.route.timeout = Some(dur.into());
         self
     }
 }

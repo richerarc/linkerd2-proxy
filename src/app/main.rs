@@ -23,7 +23,7 @@ use proxy::{
     http::{
         client, insert_target, metrics as http_metrics, normalize_uri, profiles, router, settings,
     },
-    limit, reconnect, timeout,
+    limit, reconnect,
 };
 use svc::{
     self, shared,
@@ -251,7 +251,7 @@ where
                 .push(control::client::layer())
                 .push(control::resolve::layer(dns_resolver.clone()))
                 .push(reconnect::layer().with_fixed_backoff(config.control_backoff_delay))
-                .push(proxy::timeout::layer(config.control_connect_timeout))
+                .push(svc::timeout::layer(config.control_connect_timeout))
                 .push(http_metrics::layer::<_, classify::Response>(
                     ctl_http_metrics,
                 ))
@@ -313,7 +313,7 @@ where
                 // Establishes connections to remote peers (for both TCP
                 // forwarding and HTTP proxying).
                 let connect = connect::Stack::new()
-                    .push(proxy::timeout::layer(config.outbound_connect_timeout))
+                    .push(svc::timeout::layer(config.outbound_connect_timeout))
                     .push(transport_metrics.connect("outbound"));
 
                 // Instantiates an HTTP client for for a `client::Config`
@@ -345,13 +345,19 @@ where
                 // A per-`dst::Route` layer that uses profile data to configure
                 // a per-route layer.
                 //
-                // The `classify` module installs a `classify::Response`
-                // extension into each request so that all lower metrics
-                // implementations can use the route-specific configuration.
+                // 1. The `classify` module installs a `classify::Response`
+                //    extension into each request so that all lower metrics
+                //    implementations can use the route-specific configuration.
+                // 2. A timeout is optionally enabled if the target `dst::Route`
+                //    specifies a timeout. This goes before `retry` to cap
+                //    retries.
+                // 3. Retries are optionally enabled depending on if the route
+                //    is retryable.
                 let dst_route_layer = phantom_data::layer()
                     .push(insert_target::layer())
                     .push(metrics::layer::<_, classify::Response>(retry_http_metrics.clone()))
                     .push(retry::layer(retry_http_metrics))
+                    .push(proxy::http::timeout::layer())
                     .push(metrics::layer::<_, classify::Response>(route_http_metrics))
                     .push(classify::layer());
 
@@ -418,7 +424,6 @@ where
                 // address is used.
                 let addr_router = addr_stack
                     .push(buffer::layer(MAX_IN_FLIGHT))
-                    .push(timeout::layer(config.bind_timeout))
                     .push(limit::layer(MAX_IN_FLIGHT))
                     .push(router::layer(|req: &http::Request<_>| {
                         let addr = super::http_request_authority_addr(req)
@@ -468,7 +473,7 @@ where
                 // Establishes connections to the local application (for both
                 // TCP forwarding and HTTP proxying).
                 let connect = connect::Stack::new()
-                    .push(proxy::timeout::layer(config.inbound_connect_timeout))
+                    .push(svc::timeout::layer(config.inbound_connect_timeout))
                     .push(transport_metrics.connect("inbound"))
                     .push(rewrite_loopback_addr::layer());
 

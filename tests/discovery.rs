@@ -199,12 +199,7 @@ macro_rules! generate_tests {
 
         fn init_env() -> app::config::TestEnv {
             let _ = env_logger_init();
-            let mut env = app::config::TestEnv::new();
-
-            // The bind timeout must be high enough to allow a DNS timeout.
-            env.put(app::config::ENV_BIND_TIMEOUT, "1s".to_owned());
-
-            env
+            app::config::TestEnv::new()
         }
 
         fn outbound_destinations_reset_on_reconnect<F>(f: F)
