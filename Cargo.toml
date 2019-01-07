@@ -101,3 +101,6 @@ tokio-io = "0.1.6"
 # disable them.
 [profile.test]
 debug = false
+
+[patch.'https://github.com/tower-rs/tower-grpc']
+prost-build = { git = "https://github.com/hawkw/prost", branch = "s/tempdir/tempfile"}
