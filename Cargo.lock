@@ -381,8 +381,8 @@ dependencies = [
  "futures 0.1.23 (registry+https://github.com/rust-lang/crates.io-index)",
  "http 0.1.14 (registry+https://github.com/rust-lang/crates.io-index)",
  "hyper 0.12.15 (registry+https://github.com/rust-lang/crates.io-index)",
- "tower-balance 0.1.0 (git+https://github.com/tower-rs/tower)",
- "tower-service 0.2.0 (git+https://github.com/tower-rs/tower)",
+ "tower-balance 0.1.0 (git+https://github.com/hawkw/tower?branch=eliza/rand-bump)",
+ "tower-service 0.2.0 (git+https://github.com/hawkw/tower?branch=eliza/rand-bump)",
 ]
 
 [[package]]
@@ -570,16 +570,16 @@ dependencies = [
  "tokio-signal 0.2.0 (registry+https://github.com/rust-lang/crates.io-index)",
  "tokio-timer 0.2.7 (registry+https://github.com/rust-lang/crates.io-index)",
  "tower-add-origin 0.1.0 (git+https://github.com/tower-rs/tower-http)",
- "tower-balance 0.1.0 (git+https://github.com/tower-rs/tower)",
- "tower-buffer 0.1.0 (git+https://github.com/tower-rs/tower)",
- "tower-discover 0.1.0 (git+https://github.com/tower-rs/tower)",
+ "tower-balance 0.1.0 (git+https://github.com/hawkw/tower?branch=eliza/rand-bump)",
+ "tower-buffer 0.1.0 (git+https://github.com/hawkw/tower?branch=eliza/rand-bump)",
+ "tower-discover 0.1.0 (git+https://github.com/hawkw/tower?branch=eliza/rand-bump)",
  "tower-grpc 0.1.0 (git+https://github.com/tower-rs/tower-grpc)",
  "tower-http 0.1.0 (git+https://github.com/tower-rs/tower-http)",
- "tower-in-flight-limit 0.1.0 (git+https://github.com/tower-rs/tower)",
- "tower-reconnect 0.1.0 (git+https://github.com/tower-rs/tower)",
- "tower-retry 0.1.0 (git+https://github.com/tower-rs/tower)",
- "tower-service 0.2.0 (git+https://github.com/tower-rs/tower)",
- "tower-util 0.1.0 (git+https://github.com/tower-rs/tower)",
+ "tower-in-flight-limit 0.1.0 (git+https://github.com/hawkw/tower?branch=eliza/rand-bump)",
+ "tower-reconnect 0.1.0 (git+https://github.com/hawkw/tower?branch=eliza/rand-bump)",
+ "tower-retry 0.1.0 (git+https://github.com/hawkw/tower?branch=eliza/rand-bump)",
+ "tower-service 0.2.0 (git+https://github.com/hawkw/tower?branch=eliza/rand-bump)",
+ "tower-util 0.1.0 (git+https://github.com/hawkw/tower?branch=eliza/rand-bump)",
  "trust-dns-resolver 0.10.0 (git+https://github.com/bluejekyll/trust-dns?rev=c017c114)",
  "try-lock 0.2.1 (registry+https://github.com/rust-lang/crates.io-index)",
  "untrusted 0.6.2 (registry+https://github.com/rust-lang/crates.io-index)",
@@ -611,7 +611,7 @@ dependencies = [
  "futures 0.1.23 (registry+https://github.com/rust-lang/crates.io-index)",
  "indexmap 1.0.2 (registry+https://github.com/rust-lang/crates.io-index)",
  "linkerd2-stack 0.1.0",
- "tower-service 0.2.0 (git+https://github.com/tower-rs/tower)",
+ "tower-service 0.2.0 (git+https://github.com/hawkw/tower?branch=eliza/rand-bump)",
 ]
 
 [[package]]
@@ -624,7 +624,7 @@ dependencies = [
  "linkerd2-task 0.1.0",
  "log 0.4.1 (registry+https://github.com/rust-lang/crates.io-index)",
  "tokio 0.1.7 (registry+https://github.com/rust-lang/crates.io-index)",
- "tower-service 0.2.0 (git+https://github.com/tower-rs/tower)",
+ "tower-service 0.2.0 (git+https://github.com/hawkw/tower?branch=eliza/rand-bump)",
 ]
 
 [[package]]
@@ -644,7 +644,7 @@ dependencies = [
  "futures 0.1.23 (registry+https://github.com/rust-lang/crates.io-index)",
  "tokio-connect 0.1.0 (git+https://github.com/carllerche/tokio-connect)",
  "tokio-timer 0.2.7 (registry+https://github.com/rust-lang/crates.io-index)",
- "tower-service 0.2.0 (git+https://github.com/tower-rs/tower)",
+ "tower-service 0.2.0 (git+https://github.com/hawkw/tower?branch=eliza/rand-bump)",
 ]
 
 [[package]]
@@ -1445,39 +1445,39 @@ source = "git+https://github.com/tower-rs/tower-http#786816a0ca797ab75794d36f2b9
 dependencies = [
  "futures 0.1.23 (registry+https://github.com/rust-lang/crates.io-index)",
  "http 0.1.14 (registry+https://github.com/rust-lang/crates.io-index)",
- "tower-service 0.2.0 (git+https://github.com/tower-rs/tower)",
+ "tower-service 0.2.0 (git+https://github.com/hawkw/tower?branch=eliza/rand-bump)",
 ]
 
 [[package]]
 name = "tower-balance"
 version = "0.1.0"
-source = "git+https://github.com/tower-rs/tower#bdecb3377543e00e445c4dd7177e8041e942eb5e"
+source = "git+https://github.com/hawkw/tower?branch=eliza/rand-bump#239774320bc4a403402cfa6dfba104e173a5f19f"
 dependencies = [
  "futures 0.1.23 (registry+https://github.com/rust-lang/crates.io-index)",
  "indexmap 1.0.2 (registry+https://github.com/rust-lang/crates.io-index)",
  "log 0.4.1 (registry+https://github.com/rust-lang/crates.io-index)",
- "rand 0.5.1 (registry+https://github.com/rust-lang/crates.io-index)",
+ "rand 0.6.3 (registry+https://github.com/rust-lang/crates.io-index)",
  "tokio-timer 0.2.7 (registry+https://github.com/rust-lang/crates.io-index)",
- "tower-direct-service 0.1.0 (git+https://github.com/tower-rs/tower)",
- "tower-discover 0.1.0 (git+https://github.com/tower-rs/tower)",
- "tower-service 0.2.0 (git+https://github.com/tower-rs/tower)",
+ "tower-direct-service 0.1.0 (git+https://github.com/hawkw/tower?branch=eliza/rand-bump)",
+ "tower-discover 0.1.0 (git+https://github.com/hawkw/tower?branch=eliza/rand-bump)",
+ "tower-service 0.2.0 (git+https://github.com/hawkw/tower?branch=eliza/rand-bump)",
 ]
 
 [[package]]
 name = "tower-buffer"
 version = "0.1.0"
-source = "git+https://github.com/tower-rs/tower#bdecb3377543e00e445c4dd7177e8041e942eb5e"
+source = "git+https://github.com/hawkw/tower?branch=eliza/rand-bump#239774320bc4a403402cfa6dfba104e173a5f19f"
 dependencies = [
  "futures 0.1.23 (registry+https://github.com/rust-lang/crates.io-index)",
  "tokio-executor 0.1.5 (registry+https://github.com/rust-lang/crates.io-index)",
- "tower-direct-service 0.1.0 (git+https://github.com/tower-rs/tower)",
- "tower-service 0.2.0 (git+https://github.com/tower-rs/tower)",
+ "tower-direct-service 0.1.0 (git+https://github.com/hawkw/tower?branch=eliza/rand-bump)",
+ "tower-service 0.2.0 (git+https://github.com/hawkw/tower?branch=eliza/rand-bump)",
 ]
 
 [[package]]
 name = "tower-direct-service"
 version = "0.1.0"
-source = "git+https://github.com/tower-rs/tower#7b61c1fc1992c1df684fd3f179644ef0ca9bfa4c"
+source = "git+https://github.com/hawkw/tower?branch=eliza/rand-bump#239774320bc4a403402cfa6dfba104e173a5f19f"
 dependencies = [
  "futures 0.1.23 (registry+https://github.com/rust-lang/crates.io-index)",
 ]
@@ -1485,10 +1485,10 @@ dependencies = [
 [[package]]
 name = "tower-discover"
 version = "0.1.0"
-source = "git+https://github.com/tower-rs/tower#bdecb3377543e00e445c4dd7177e8041e942eb5e"
+source = "git+https://github.com/hawkw/tower?branch=eliza/rand-bump#239774320bc4a403402cfa6dfba104e173a5f19f"
 dependencies = [
  "futures 0.1.23 (registry+https://github.com/rust-lang/crates.io-index)",
- "tower-service 0.2.0 (git+https://github.com/tower-rs/tower)",
+ "tower-service 0.2.0 (git+https://github.com/hawkw/tower?branch=eliza/rand-bump)",
 ]
 
 [[package]]
@@ -1504,8 +1504,8 @@ dependencies = [
  "percent-encoding 1.0.1 (registry+https://github.com/rust-lang/crates.io-index)",
  "prost 0.4.0 (registry+https://github.com/rust-lang/crates.io-index)",
  "tower-http 0.1.0 (git+https://github.com/tower-rs/tower-http)",
- "tower-service 0.2.0 (git+https://github.com/tower-rs/tower)",
- "tower-util 0.1.0 (git+https://github.com/tower-rs/tower)",
+ "tower-service 0.2.0 (git+https://github.com/hawkw/tower?branch=eliza/rand-bump)",
+ "tower-util 0.1.0 (git+https://github.com/hawkw/tower?branch=eliza/rand-bump)",
 ]
 
 [[package]]
@@ -1526,43 +1526,43 @@ dependencies = [
  "futures 0.1.23 (registry+https://github.com/rust-lang/crates.io-index)",
  "http 0.1.14 (registry+https://github.com/rust-lang/crates.io-index)",
  "tower-add-origin 0.1.0 (git+https://github.com/tower-rs/tower-http)",
- "tower-service 0.2.0 (git+https://github.com/tower-rs/tower)",
+ "tower-service 0.2.0 (git+https://github.com/hawkw/tower?branch=eliza/rand-bump)",
 ]
 
 [[package]]
 name = "tower-in-flight-limit"
 version = "0.1.0"
-source = "git+https://github.com/tower-rs/tower#bdecb3377543e00e445c4dd7177e8041e942eb5e"
+source = "git+https://github.com/hawkw/tower?branch=eliza/rand-bump#239774320bc4a403402cfa6dfba104e173a5f19f"
 dependencies = [
  "futures 0.1.23 (registry+https://github.com/rust-lang/crates.io-index)",
- "tower-service 0.2.0 (git+https://github.com/tower-rs/tower)",
+ "tower-service 0.2.0 (git+https://github.com/hawkw/tower?branch=eliza/rand-bump)",
 ]
 
 [[package]]
 name = "tower-reconnect"
 version = "0.1.0"
-source = "git+https://github.com/tower-rs/tower#bdecb3377543e00e445c4dd7177e8041e942eb5e"
+source = "git+https://github.com/hawkw/tower?branch=eliza/rand-bump#239774320bc4a403402cfa6dfba104e173a5f19f"
 dependencies = [
  "futures 0.1.23 (registry+https://github.com/rust-lang/crates.io-index)",
  "log 0.4.1 (registry+https://github.com/rust-lang/crates.io-index)",
- "tower-service 0.2.0 (git+https://github.com/tower-rs/tower)",
- "tower-util 0.1.0 (git+https://github.com/tower-rs/tower)",
+ "tower-service 0.2.0 (git+https://github.com/hawkw/tower?branch=eliza/rand-bump)",
+ "tower-util 0.1.0 (git+https://github.com/hawkw/tower?branch=eliza/rand-bump)",
 ]
 
 [[package]]
 name = "tower-retry"
 version = "0.1.0"
-source = "git+https://github.com/tower-rs/tower#075ffb372556d05a7db02ce49db34cfb22850dba"
+source = "git+https://github.com/hawkw/tower?branch=eliza/rand-bump#239774320bc4a403402cfa6dfba104e173a5f19f"
 dependencies = [
  "futures 0.1.23 (registry+https://github.com/rust-lang/crates.io-index)",
  "tokio-timer 0.2.7 (registry+https://github.com/rust-lang/crates.io-index)",
- "tower-service 0.2.0 (git+https://github.com/tower-rs/tower)",
+ "tower-service 0.2.0 (git+https://github.com/hawkw/tower?branch=eliza/rand-bump)",
 ]
 
 [[package]]
 name = "tower-service"
 version = "0.2.0"
-source = "git+https://github.com/tower-rs/tower#7b61c1fc1992c1df684fd3f179644ef0ca9bfa4c"
+source = "git+https://github.com/hawkw/tower?branch=eliza/rand-bump#239774320bc4a403402cfa6dfba104e173a5f19f"
 dependencies = [
  "futures 0.1.23 (registry+https://github.com/rust-lang/crates.io-index)",
 ]
@@ -1570,11 +1570,11 @@ dependencies = [
 [[package]]
 name = "tower-util"
 version = "0.1.0"
-source = "git+https://github.com/tower-rs/tower#7b61c1fc1992c1df684fd3f179644ef0ca9bfa4c"
+source = "git+https://github.com/hawkw/tower?branch=eliza/rand-bump#239774320bc4a403402cfa6dfba104e173a5f19f"
 dependencies = [
  "futures 0.1.23 (registry+https://github.com/rust-lang/crates.io-index)",
- "tower-direct-service 0.1.0 (git+https://github.com/tower-rs/tower)",
- "tower-service 0.2.0 (git+https://github.com/tower-rs/tower)",
+ "tower-direct-service 0.1.0 (git+https://github.com/hawkw/tower?branch=eliza/rand-bump)",
+ "tower-service 0.2.0 (git+https://github.com/hawkw/tower?branch=eliza/rand-bump)",
 ]
 
 [[package]]
@@ -1932,18 +1932,18 @@ dependencies = [
 "checksum tokio-timer 0.2.7 (registry+https://github.com/rust-lang/crates.io-index)" = "3a52f00c97fedb6d535d27f65cccb7181c8dd4c6edc3eda9ea93f6d45d05168e"
 "checksum tokio-udp 0.1.0 (registry+https://github.com/rust-lang/crates.io-index)" = "137bda266504893ac4774e0ec4c2108f7ccdbcb7ac8dced6305fe9e4e0b5041a"
 "checksum tower-add-origin 0.1.0 (git+https://github.com/tower-rs/tower-http)" = "<none>"
-"checksum tower-balance 0.1.0 (git+https://github.com/tower-rs/tower)" = "<none>"
-"checksum tower-buffer 0.1.0 (git+https://github.com/tower-rs/tower)" = "<none>"
-"checksum tower-direct-service 0.1.0 (git+https://github.com/tower-rs/tower)" = "<none>"
-"checksum tower-discover 0.1.0 (git+https://github.com/tower-rs/tower)" = "<none>"
+"checksum tower-balance 0.1.0 (git+https://github.com/hawkw/tower?branch=eliza/rand-bump)" = "<none>"
+"checksum tower-buffer 0.1.0 (git+https://github.com/hawkw/tower?branch=eliza/rand-bump)" = "<none>"
+"checksum tower-direct-service 0.1.0 (git+https://github.com/hawkw/tower?branch=eliza/rand-bump)" = "<none>"
+"checksum tower-discover 0.1.0 (git+https://github.com/hawkw/tower?branch=eliza/rand-bump)" = "<none>"
 "checksum tower-grpc 0.1.0 (git+https://github.com/tower-rs/tower-grpc)" = "<none>"
 "checksum tower-grpc-build 0.1.0 (git+https://github.com/tower-rs/tower-grpc)" = "<none>"
 "checksum tower-http 0.1.0 (git+https://github.com/tower-rs/tower-http)" = "<none>"
-"checksum tower-in-flight-limit 0.1.0 (git+https://github.com/tower-rs/tower)" = "<none>"
-"checksum tower-reconnect 0.1.0 (git+https://github.com/tower-rs/tower)" = "<none>"
-"checksum tower-retry 0.1.0 (git+https://github.com/tower-rs/tower)" = "<none>"
-"checksum tower-service 0.2.0 (git+https://github.com/tower-rs/tower)" = "<none>"
-"checksum tower-util 0.1.0 (git+https://github.com/tower-rs/tower)" = "<none>"
+"checksum tower-in-flight-limit 0.1.0 (git+https://github.com/hawkw/tower?branch=eliza/rand-bump)" = "<none>"
+"checksum tower-reconnect 0.1.0 (git+https://github.com/hawkw/tower?branch=eliza/rand-bump)" = "<none>"
+"checksum tower-retry 0.1.0 (git+https://github.com/hawkw/tower?branch=eliza/rand-bump)" = "<none>"
+"checksum tower-service 0.2.0 (git+https://github.com/hawkw/tower?branch=eliza/rand-bump)" = "<none>"
+"checksum tower-util 0.1.0 (git+https://github.com/hawkw/tower?branch=eliza/rand-bump)" = "<none>"
 "checksum trust-dns-proto 0.5.0 (git+https://github.com/bluejekyll/trust-dns?rev=c017c114)" = "<none>"
 "checksum trust-dns-resolver 0.10.0 (git+https://github.com/bluejekyll/trust-dns?rev=c017c114)" = "<none>"
 "checksum try-lock 0.2.1 (registry+https://github.com/rust-lang/crates.io-index)" = "119b532a17fbe772d360be65617310164549a07c25a1deab04c84168ce0d4545"
