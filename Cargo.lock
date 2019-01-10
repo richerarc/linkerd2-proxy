@@ -587,7 +587,7 @@ dependencies = [
  "tower-retry 0.1.0 (git+https://github.com/hawkw/tower?branch=eliza/rand-bump)",
  "tower-service 0.2.0 (git+https://github.com/hawkw/tower?branch=eliza/rand-bump)",
  "tower-util 0.1.0 (git+https://github.com/hawkw/tower?branch=eliza/rand-bump)",
- "trust-dns-resolver 0.10.0 (git+https://github.com/bluejekyll/trust-dns?rev=c017c114)",
+ "trust-dns-resolver 0.10.2 (git+https://github.com/bluejekyll/trust-dns?rev=7c8a0739dad495bf5a4fddfe86b8bbe2aa52d060)",
  "try-lock 0.2.1 (registry+https://github.com/rust-lang/crates.io-index)",
  "untrusted 0.6.2 (registry+https://github.com/rust-lang/crates.io-index)",
  "webpki 0.18.1 (registry+https://github.com/rust-lang/crates.io-index)",
@@ -1033,6 +1033,7 @@ version = "0.6.3"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 dependencies = [
  "autocfg 0.1.1 (registry+https://github.com/rust-lang/crates.io-index)",
+
  "libc 0.2.46 (registry+https://github.com/rust-lang/crates.io-index)",
  "rand_chacha 0.1.1 (registry+https://github.com/rust-lang/crates.io-index)",
  "rand_core 0.3.0 (registry+https://github.com/rust-lang/crates.io-index)",
@@ -1673,8 +1674,8 @@ dependencies = [
 
 [[package]]
 name = "trust-dns-proto"
-version = "0.5.0"
-source = "git+https://github.com/bluejekyll/trust-dns?rev=c017c114#c017c114177d826d00710572ff1fcb103f752f43"
+version = "0.6.0"
+source = "git+https://github.com/bluejekyll/trust-dns?rev=7c8a0739dad495bf5a4fddfe86b8bbe2aa52d060#7c8a0739dad495bf5a4fddfe86b8bbe2aa52d060"
 dependencies = [
  "byteorder 1.2.1 (registry+https://github.com/rust-lang/crates.io-index)",
  "failure 0.1.1 (registry+https://github.com/rust-lang/crates.io-index)",
@@ -1682,7 +1683,7 @@ dependencies = [
  "idna 0.1.4 (registry+https://github.com/rust-lang/crates.io-index)",
  "lazy_static 1.0.0 (registry+https://github.com/rust-lang/crates.io-index)",
  "log 0.4.6 (registry+https://github.com/rust-lang/crates.io-index)",
- "rand 0.5.1 (registry+https://github.com/rust-lang/crates.io-index)",
+ "rand 0.6.3 (registry+https://github.com/rust-lang/crates.io-index)",
  "smallvec 0.6.3 (registry+https://github.com/rust-lang/crates.io-index)",
  "socket2 0.3.5 (registry+https://github.com/rust-lang/crates.io-index)",
  "tokio-executor 0.1.5 (registry+https://github.com/rust-lang/crates.io-index)",
@@ -1696,8 +1697,8 @@ dependencies = [
 
 [[package]]
 name = "trust-dns-resolver"
-version = "0.10.0"
-source = "git+https://github.com/bluejekyll/trust-dns?rev=c017c114#c017c114177d826d00710572ff1fcb103f752f43"
+version = "0.10.2"
+source = "git+https://github.com/bluejekyll/trust-dns?rev=7c8a0739dad495bf5a4fddfe86b8bbe2aa52d060#7c8a0739dad495bf5a4fddfe86b8bbe2aa52d060"
 dependencies = [
  "cfg-if 0.1.2 (registry+https://github.com/rust-lang/crates.io-index)",
  "failure 0.1.1 (registry+https://github.com/rust-lang/crates.io-index)",
@@ -1709,7 +1710,7 @@ dependencies = [
  "resolv-conf 0.6.0 (registry+https://github.com/rust-lang/crates.io-index)",
  "smallvec 0.6.3 (registry+https://github.com/rust-lang/crates.io-index)",
  "tokio 0.1.14 (registry+https://github.com/rust-lang/crates.io-index)",
- "trust-dns-proto 0.5.0 (git+https://github.com/bluejekyll/trust-dns?rev=c017c114)",
+ "trust-dns-proto 0.6.0 (git+https://github.com/bluejekyll/trust-dns?rev=7c8a0739dad495bf5a4fddfe86b8bbe2aa52d060)",
 ]
 
 [[package]]
@@ -2046,8 +2047,8 @@ dependencies = [
 "checksum tower-retry 0.1.0 (git+https://github.com/hawkw/tower?branch=eliza/rand-bump)" = "<none>"
 "checksum tower-service 0.2.0 (git+https://github.com/hawkw/tower?branch=eliza/rand-bump)" = "<none>"
 "checksum tower-util 0.1.0 (git+https://github.com/hawkw/tower?branch=eliza/rand-bump)" = "<none>"
-"checksum trust-dns-proto 0.5.0 (git+https://github.com/bluejekyll/trust-dns?rev=c017c114)" = "<none>"
-"checksum trust-dns-resolver 0.10.0 (git+https://github.com/bluejekyll/trust-dns?rev=c017c114)" = "<none>"
+"checksum trust-dns-proto 0.6.0 (git+https://github.com/bluejekyll/trust-dns?rev=7c8a0739dad495bf5a4fddfe86b8bbe2aa52d060)" = "<none>"
+"checksum trust-dns-resolver 0.10.2 (git+https://github.com/bluejekyll/trust-dns?rev=7c8a0739dad495bf5a4fddfe86b8bbe2aa52d060)" = "<none>"
 "checksum try-lock 0.2.1 (registry+https://github.com/rust-lang/crates.io-index)" = "119b532a17fbe772d360be65617310164549a07c25a1deab04c84168ce0d4545"
 "checksum ucd-util 0.1.1 (registry+https://github.com/rust-lang/crates.io-index)" = "fd2be2d6639d0f8fe6cdda291ad456e23629558d466e2789d2c3e9892bda285d"
 "checksum unicode-bidi 0.3.4 (registry+https://github.com/rust-lang/crates.io-index)" = "49f2bd0c6468a8230e1db229cff8029217cf623c767ea5d60bfbd42729ea54d5"
